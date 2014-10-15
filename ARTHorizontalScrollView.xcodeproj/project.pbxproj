@@ -13,6 +13,7 @@
 		6EE9DFD719EE4C1E00EEECBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9DFD619EE4C1E00EEECBD /* Images.xcassets */; };
 		6EE9DFDA19EE4C1E00EEECBD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9DFD819EE4C1E00EEECBD /* LaunchScreen.xib */; };
 		6EE9DFE619EE4C1E00EEECBD /* ARTHorizontalScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9DFE519EE4C1E00EEECBD /* ARTHorizontalScrollViewTests.swift */; };
+		6EE9DFF219EE4CF000EEECBD /* ARTHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9DFF119EE4CF000EEECBD /* ARTHorizontalScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		6EE9DFDF19EE4C1E00EEECBD /* ARTHorizontalScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTHorizontalScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE9DFE419EE4C1E00EEECBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EE9DFE519EE4C1E00EEECBD /* ARTHorizontalScrollViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTHorizontalScrollViewTests.swift; sourceTree = "<group>"; };
+		6EE9DFF119EE4CF000EEECBD /* ARTHorizontalScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTHorizontalScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				6EE9DFCF19EE4C1E00EEECBD /* AppDelegate.swift */,
 				6EE9DFD119EE4C1E00EEECBD /* ViewController.swift */,
+				6EE9DFF119EE4CF000EEECBD /* ARTHorizontalScrollView.swift */,
 				6EE9DFD319EE4C1E00EEECBD /* Main.storyboard */,
 				6EE9DFD619EE4C1E00EEECBD /* Images.xcassets */,
 				6EE9DFD819EE4C1E00EEECBD /* LaunchScreen.xib */,
@@ -214,6 +217,7 @@
 			files = (
 				6EE9DFD219EE4C1E00EEECBD /* ViewController.swift in Sources */,
 				6EE9DFD019EE4C1E00EEECBD /* AppDelegate.swift in Sources */,
+				6EE9DFF219EE4CF000EEECBD /* ARTHorizontalScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +411,7 @@
 				6EE9DFEB19EE4C1E00EEECBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EE9DFEC19EE4C1E00EEECBD /* Build configuration list for PBXNativeTarget "ARTHorizontalScrollViewTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				6EE9DFEE19EE4C1E00EEECBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
