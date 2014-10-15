@@ -8,13 +8,21 @@
 
 import UIKit
 
+protocol ARTHorizontalScrollViewDelegate {
+    func scrollViewDidSelected(horizontalScrollView:ARTHorizontalScrollView)
+}
+
 class ARTHorizontalScrollView : UIView, UIScrollViewDelegate {
+    
+    var delegate:ARTHorizontalScrollViewDelegate?
     
     // 1 | 3 | 5 | 7
     var mLabelCountOnScreen = CGFloat(1)
     var VIEW_HEIGHT:CGFloat!
     
     var mLabelNames:[String]!
+    var mBgName:String!
+    var mIndex:Int!
     
     var labelWidth : CGFloat {
         get {
@@ -25,12 +33,13 @@ class ARTHorizontalScrollView : UIView, UIScrollViewDelegate {
     var mScrollView: UIScrollView!
     var mBgImageView: UIImageView!
     
-    init (frame: CGRect , labelCountOnScreen: Int, labelNames: [String]) {
+    init (frame: CGRect , labelCountOnScreen: Int, labelNames: [String], backgroundImageName: String) {
         super.init(frame: frame)
         
         mLabelNames = labelNames
         mLabelCountOnScreen = CGFloat(labelCountOnScreen)
         VIEW_HEIGHT = frame.height
+        mBgName = backgroundImageName
         
         configView()
     }
@@ -49,7 +58,7 @@ class ARTHorizontalScrollView : UIView, UIScrollViewDelegate {
     }
     
     func initBgImageView() {
-        let bgImg = UIImage(named: "bg")
+        let bgImg = UIImage(named: mBgName)
         mBgImageView = UIImageView(image:bgImg)
         mBgImageView.frame = CGRectMake(0, 0, self.frame.width, VIEW_HEIGHT)
     }
@@ -93,10 +102,14 @@ class ARTHorizontalScrollView : UIView, UIScrollViewDelegate {
     
     func fixContentOffsetWithScrollView(scrollView: UIScrollView) {
         let x = scrollView.contentOffset.x
-        let offset = x % self.labelWidth
-        let fixOffset = (offset < self.labelWidth/2) ? -offset : (self.labelWidth-offset)
+        let offset = x % labelWidth
+        let fixOffset = (offset < labelWidth/2) ? -offset : (labelWidth-offset)
         
         scrollView.setContentOffset(CGPointMake(x+fixOffset, 0), animated: true)
-    }
 
+        mIndex = Int((x+fixOffset)/labelWidth + ceil(mLabelCountOnScreen/2))
+        
+        delegate?.scrollViewDidSelected(self)
+    }
+    
 }

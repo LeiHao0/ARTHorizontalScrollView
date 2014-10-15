@@ -11,7 +11,6 @@
 		6EE9DFD219EE4C1E00EEECBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9DFD119EE4C1E00EEECBD /* ViewController.swift */; };
 		6EE9DFD519EE4C1E00EEECBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9DFD319EE4C1E00EEECBD /* Main.storyboard */; };
 		6EE9DFD719EE4C1E00EEECBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9DFD619EE4C1E00EEECBD /* Images.xcassets */; };
-		6EE9DFDA19EE4C1E00EEECBD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9DFD819EE4C1E00EEECBD /* LaunchScreen.xib */; };
 		6EE9DFE619EE4C1E00EEECBD /* ARTHorizontalScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9DFE519EE4C1E00EEECBD /* ARTHorizontalScrollViewTests.swift */; };
 		6EE9DFF219EE4CF000EEECBD /* ARTHorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9DFF119EE4CF000EEECBD /* ARTHorizontalScrollView.swift */; };
 /* End PBXBuildFile section */
@@ -33,7 +32,6 @@
 		6EE9DFD119EE4C1E00EEECBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6EE9DFD419EE4C1E00EEECBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6EE9DFD619EE4C1E00EEECBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6EE9DFD919EE4C1E00EEECBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6EE9DFDF19EE4C1E00EEECBD /* ARTHorizontalScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTHorizontalScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE9DFE419EE4C1E00EEECBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EE9DFE519EE4C1E00EEECBD /* ARTHorizontalScrollViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTHorizontalScrollViewTests.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				6EE9DFF119EE4CF000EEECBD /* ARTHorizontalScrollView.swift */,
 				6EE9DFD319EE4C1E00EEECBD /* Main.storyboard */,
 				6EE9DFD619EE4C1E00EEECBD /* Images.xcassets */,
-				6EE9DFD819EE4C1E00EEECBD /* LaunchScreen.xib */,
 				6EE9DFCD19EE4C1E00EEECBD /* Supporting Files */,
 			);
 			path = ARTHorizontalScrollView;
@@ -196,7 +193,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EE9DFD519EE4C1E00EEECBD /* Main.storyboard in Resources */,
-				6EE9DFDA19EE4C1E00EEECBD /* LaunchScreen.xib in Resources */,
 				6EE9DFD719EE4C1E00EEECBD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,14 +244,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6EE9DFD819EE4C1E00EEECBD /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6EE9DFD919EE4C1E00EEECBD /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -293,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -330,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -8,22 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ARTHorizontalScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let rm = CGRectMake(0, 80, self.view.frame.width, 50)
-
+        let rectMake = CGRectMake(0, 80, self.view.frame.width, 50)
+        let labelCountOnScreen = 5
         var labelNames = [String]()
-        
-        for i in 1...20 {
+        for i in 1...50 {
             labelNames.append("test\(i)")
         }
         
-        var hsv = ARTHorizontalScrollView(frame:rm, labelCountOnScreen: 5,labelNames: labelNames)
+        var hsv = ARTHorizontalScrollView(frame:rectMake, labelCountOnScreen: labelCountOnScreen,labelNames: labelNames, backgroundImageName:"bg")
         self.view.addSubview(hsv)
+        
+        hsv.delegate = self
+    }
+    
+    func scrollViewDidSelected(horizontalScrollView: ARTHorizontalScrollView) {
+        println("\(horizontalScrollView.mIndex)")
     }
 
     override func didReceiveMemoryWarning() {
