@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ARTHorizontalScrollViewDelegate {
+@objc protocol ARTHorizontalScrollViewDelegate {
     func scrollViewDidSelected(horizontalScrollView:ARTHorizontalScrollView)
 }
 
@@ -22,12 +22,17 @@ class ARTHorizontalScrollView : UIView, UIScrollViewDelegate {
     
     var mLabelNames:[String]!
     var mBgName:String!
-    var mIndex:Int!
     
     var labelWidth : CGFloat {
         get {
             return self.frame.width/mLabelCountOnScreen
         }
+    }
+    
+    var mIndex:NSNumber!
+    func setIndex(index:Int) {
+        let x = Int(labelWidth) * index + 2
+        mScrollView.setContentOffset(CGPointMake(CGFloat(x), 0), animated: false)
     }
     
     var mScrollView: UIScrollView!
@@ -43,7 +48,7 @@ class ARTHorizontalScrollView : UIView, UIScrollViewDelegate {
         
         configView()
     }
-
+    
     func configView() {
         initScrollView()
         initBgImageView()
@@ -69,7 +74,7 @@ class ARTHorizontalScrollView : UIView, UIScrollViewDelegate {
             var label = UILabel()
             label.text = labelName
             label.textAlignment = NSTextAlignment.Center
-//            label.adjustsFontSizeToFitWidth = true
+            //            label.adjustsFontSizeToFitWidth = true
             label.lineBreakMode = NSLineBreakMode.ByTruncatingTail
             label.frame = CGRectMake(2, 2, self.labelWidth-4, VIEW_HEIGHT-4)
             label.frame.origin.x = 2+self.frame.width*(CGFloat(i) + floor(mLabelCountOnScreen/2))/mLabelCountOnScreen
@@ -106,8 +111,8 @@ class ARTHorizontalScrollView : UIView, UIScrollViewDelegate {
         let fixOffset = (offset < labelWidth/2) ? -offset : (labelWidth-offset)
         
         scrollView.setContentOffset(CGPointMake(x+fixOffset, 0), animated: true)
-
-        mIndex = Int((x+fixOffset)/labelWidth)
+        
+        mIndex = NSNumber(integer:Int((x+fixOffset)/labelWidth))
         
         delegate?.scrollViewDidSelected(self)
     }

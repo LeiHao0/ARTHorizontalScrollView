@@ -25,6 +25,8 @@ class ViewController: UIViewController, ARTHorizontalScrollViewDelegate {
         self.view.addSubview(hsv)
         
         hsv.delegate = self
+        
+        hsv.setIndex(5) // scrollTo 5
     }
     
     func scrollViewDidSelected(horizontalScrollView: ARTHorizontalScrollView) {

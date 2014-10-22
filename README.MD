@@ -8,7 +8,7 @@
 2. in your `ViewController`:
 
 ```swift
-override func viewDidLoad() {
+	override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -23,7 +23,10 @@ override func viewDidLoad() {
         self.view.addSubview(hsv)
         
         hsv.delegate = self
+        
+        hsv.setIndex(5) // scrollTo 5
     }
+
     
     func scrollViewDidSelected(horizontalScrollView: ARTHorizontalScrollView) {
         let index = "\(horizontalScrollView.mIndex)"
@@ -31,4 +34,5 @@ override func viewDidLoad() {
         // do something here when scrollViewDidSelected
         showLabel(index)
     }
+    
 ```
