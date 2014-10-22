@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E28F58619F795EF00ED4218 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E28F58519F795EF00ED4218 /* QuartzCore.framework */; };
 		6EE9DFD019EE4C1E00EEECBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9DFCF19EE4C1E00EEECBD /* AppDelegate.swift */; };
 		6EE9DFD219EE4C1E00EEECBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9DFD119EE4C1E00EEECBD /* ViewController.swift */; };
 		6EE9DFD519EE4C1E00EEECBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9DFD319EE4C1E00EEECBD /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E28F58519F795EF00ED4218 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6EE9DFCA19EE4C1E00EEECBD /* ARTHorizontalScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTHorizontalScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE9DFCE19EE4C1E00EEECBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EE9DFCF19EE4C1E00EEECBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E28F58619F795EF00ED4218 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		6EE9DFC119EE4C1E00EEECBD = {
 			isa = PBXGroup;
 			children = (
+				6E28F58519F795EF00ED4218 /* QuartzCore.framework */,
 				6EE9DFCC19EE4C1E00EEECBD /* ARTHorizontalScrollView */,
 				6EE9DFE219EE4C1E00EEECBD /* ARTHorizontalScrollViewTests */,
 				6EE9DFCB19EE4C1E00EEECBD /* Products */,
