@@ -15,9 +15,9 @@ class ViewController: UIViewController, ARTHorizontalScrollViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         let rectMake = CGRectMake(0, 80, self.view.frame.width, 50)
-        let labelCountOnScreen = 5
+        let labelCountOnScreen = 3
         var labelNames = [String]()
-        for i in 1...50 {
+        for i in 1...15 {
             labelNames.append("test\(i)")
         }
         

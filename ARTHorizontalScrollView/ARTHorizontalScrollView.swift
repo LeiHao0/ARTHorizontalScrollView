@@ -72,7 +72,7 @@ class ARTHorizontalScrollView : UIView, UIScrollViewDelegate {
 //            label.adjustsFontSizeToFitWidth = true
             label.lineBreakMode = NSLineBreakMode.ByTruncatingTail
             label.frame = CGRectMake(0, 0, self.labelWidth, VIEW_HEIGHT)
-            label.frame.origin.x = self.frame.width*CGFloat(i)/mLabelCountOnScreen
+            label.frame.origin.x = self.frame.width*(CGFloat(i) + floor(mLabelCountOnScreen/2))/mLabelCountOnScreen
             mScrollView.addSubview(label)
             ++i
         }
@@ -84,7 +84,7 @@ class ARTHorizontalScrollView : UIView, UIScrollViewDelegate {
         mScrollView.scrollEnabled = true
         mScrollView.frame = CGRectMake(0, 0, self.frame.width, VIEW_HEIGHT)
         mScrollView.backgroundColor = UIColor.clearColor()
-        mScrollView.contentSize.width = self.frame.width*CGFloat(mLabelNames.endIndex)/mLabelCountOnScreen
+        mScrollView.contentSize.width = self.frame.width*CGFloat(mLabelNames.endIndex + Int(mLabelCountOnScreen) - 1)/mLabelCountOnScreen
         mScrollView.decelerationRate = 0.2
         
         mScrollView.delegate = self
@@ -107,7 +107,7 @@ class ARTHorizontalScrollView : UIView, UIScrollViewDelegate {
         
         scrollView.setContentOffset(CGPointMake(x+fixOffset, 0), animated: true)
 
-        mIndex = Int((x+fixOffset)/labelWidth + ceil(mLabelCountOnScreen/2))
+        mIndex = Int((x+fixOffset)/labelWidth ) + 1
         
         delegate?.scrollViewDidSelected(self)
     }
